@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: yourname
+      changes:
+        - createTable:
+            tableName: wallets
+            columns:
+              - column:
+                  name: wallet_id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: balance
+                  type: double
+                  constraints:
+                    nullable: false
